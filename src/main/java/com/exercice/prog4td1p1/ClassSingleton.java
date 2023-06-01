@@ -5,12 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
 @Getter
 @Setter
 public class ClassSingleton {
     private static ClassSingleton INSTANCE ;
     private String description = "";
+    private ClassSingleton() {
+
+    }
 
     public static ClassSingleton getINSTANCE(){
         if (INSTANCE == null)
